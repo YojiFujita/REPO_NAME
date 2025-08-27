@@ -155,7 +155,7 @@ export default function Home() {
     }
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     const container = document.getElementById('carousel-container');
     if (container) {
       const cardWidth = isMobile ? 320 : 400;
