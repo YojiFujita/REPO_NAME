@@ -110,7 +110,18 @@ export default function Home() {
     }
   };
 
-  const openModal = (project) => {
+  type HomeProject = {
+    before: string;
+    after: string;
+    title: string;
+    description: string;
+    price: string;
+    period: string;
+    location: string;
+    date: string;
+  };
+
+  const openModal = (project: HomeProject) => {
     setSelectedProject(project);
     setModalOpen(true);
     document.body.style.overflow = 'hidden';
