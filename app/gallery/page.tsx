@@ -192,9 +192,9 @@ export default function Gallery() {
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
-  const popularProjects = projects.filter(project => project.popular);
+  const popularProjects = projects.filter((project: any) => project.popular);
 
-  const openModal = (project) => {
+  const openModal = (project: any) => {
     setSelectedProject(project);
     setModalOpen(true);
     document.body.style.overflow = 'hidden';
