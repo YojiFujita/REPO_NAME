@@ -3,10 +3,25 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+type Project = {
+  id: number;
+  title: string;
+  category: 'modern' | 'natural' | 'vintage' | 'luxury' | 'minimal';
+  before: string;
+  after: string;
+  description: string;
+  price: string;
+  period: string;
+  location: string;
+  date: string;
+  area: string;
+  popular: boolean;
+};
+
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const categories = [
     { id: 'all', name: 'すべて', icon: 'ri-home-line' },
@@ -17,7 +32,7 @@ export default function Gallery() {
     { id: 'minimal', name: 'ミニマル', icon: 'ri-subtract-line' }
   ];
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "伝統的な和室から現代的なリビングへ",
@@ -188,13 +203,13 @@ export default function Gallery() {
     }
   ];
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const filteredProjects: Project[] = selectedCategory === 'all'
+    ? projects
+    : projects.filter((project: Project) => project.category === selectedCategory);
 
-  const popularProjects = projects.filter((project: any) => project.popular);
+  const popularProjects: Project[] = projects.filter((project: Project) => project.popular);
 
-  const openModal = (project: any) => {
+  const openModal = (project: Project) => {
     setSelectedProject(project);
     setModalOpen(true);
     document.body.style.overflow = 'hidden';
