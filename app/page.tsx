@@ -12,7 +12,7 @@ export default function Home() {
   });
   const [showEstimate, setShowEstimate] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<HomeProject | null>(null);
   const [carouselPosition, setCarouselPosition] = useState(1); 
   const [isMobile, setIsMobile] = useState(false);
 
