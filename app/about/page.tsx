@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -199,10 +200,12 @@ export default function About() {
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
                   写真で一目瞭然
                 </h3>
-                <img
+                <Image
                   src="https://readdy.ai/api/search-image?query=Split%20screen%20showing%20before%20and%20after%20Japanese%20apartment%20renovation%2C%20left%20side%20shows%20old%20traditional%20room%20with%20worn%20tatami%20and%20dark%20wood%2C%20right%20side%20shows%20modern%20bright%20space%20with%20contemporary%20flooring%20and%20lighting%2C%20clean%20comparison%20layout%2C%20professional%20real%20estate%20photography%20style%2C%20simple%20clean%20background&width=400&height=300&seq=about2&orientation=landscape"
                   alt="Before After comparison"
                   className="w-full h-48 object-cover object-top rounded-2xl mb-6"
+                  width={400}
+                  height={300}
                 />
                 <p className="text-gray-600 leading-relaxed">
                   複雑な専門用語や図面は一切不要。Before/After写真を見比べるだけで、完成後のイメージが直感的に分かります。
@@ -219,10 +222,12 @@ export default function About() {
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
                   5秒で見積もり
                 </h3>
-                <img
+                <Image
                   src="https://readdy.ai/api/search-image?query=Modern%20smartphone%20showing%20instant%20renovation%20cost%20calculator%20app%20with%20simple%20interface%2C%20clean%20numbers%20and%20pricing%20display%2C%20contemporary%20mobile%20UI%20design%2C%20professional%20app%20screenshot%20style%2C%20bright%20clean%20background&width=400&height=300&seq=about3&orientation=landscape"
                   alt="Quick estimate"
                   className="w-full h-48 object-cover object-top rounded-2xl mb-6"
+                  width={400}
+                  height={300}
                 />
                 <p className="text-gray-600 leading-relaxed">
                   面積と部屋タイプを入力するだけで、即座に概算費用を表示。従来の数週間かかる見積もりプロセスを革新しました。
@@ -239,10 +244,12 @@ export default function About() {
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
                   スマホで完結
                 </h3>
-                <img
+                <Image
                   src="https://readdy.ai/api/search-image?query=Person%20using%20smartphone%20to%20manage%20home%20renovation%20project%2C%20showing%20progress%20photos%20and%20communication%20with%20contractors%2C%20modern%20mobile%20app%20interface%2C%20contemporary%20lifestyle%20photography%2C%20clean%20professional%20background&width=400&height=300&seq=about4&orientation=landscape"
                   alt="Mobile complete solution"
                   className="w-full h-48 object-cover object-top rounded-2xl mb-6"
+                  width={400}
+                  height={300}
                 />
                 <p className="text-gray-600 leading-relaxed">
                   相談から発注、進捗確認まで全てスマートフォンで完結。忙しい大家さんでも、いつでもどこでも対応可能です。
@@ -267,10 +274,12 @@ export default function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <img
+              <Image
                 src="https://readdy.ai/api/search-image?query=Professional%20renovation%20team%20working%20on%20Japanese%20apartment%20interior%2C%20showing%20skilled%20craftsmen%20installing%20modern%20flooring%20and%20lighting%2C%20high%20quality%20workmanship%2C%20contemporary%20construction%20process%2C%20clean%20professional%20environment%2C%20natural%20lighting&width=600&height=400&seq=about5&orientation=landscape"
                 alt="Professional renovation process"
                 className="w-full h-80 object-cover object-top rounded-3xl shadow-lg"
+                width={600}
+                height={400}
               />
             </div>
             <div>
@@ -361,10 +370,12 @@ export default function About() {
             ].map((testimonial, index) => (
               <div key={index} className="bg-white p-8 rounded-3xl shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img
+                  <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-16 h-16 rounded-full object-cover object-top mr-4"
+                    width={64}
+                    height={64}
                   />
                   <div>
                     <h4 className="font-semibold text-lg">{testimonial.name}</h4>
@@ -377,7 +388,7 @@ export default function About() {
                   ))}
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  "{testimonial.comment}"
+                  &ldquo;{testimonial.comment}&rdquo;
                 </p>
               </div>
             ))}
