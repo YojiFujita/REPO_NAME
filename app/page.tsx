@@ -408,8 +408,8 @@ export default function Home() {
               </div>
 
               {/* レスポンシブ画像セクション */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mb-6 lg:mb-8">
-                <div className="relative">
+              <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 mb-6 lg:mb-8">
+                <div className="relative flex-1">
                   <div className="absolute top-2 sm:top-4 left-2 sm:left-4 bg-red-500 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-sm sm:text-lg font-semibold z-10 shadow-lg">
                     BEFORE
                   </div>
@@ -419,14 +419,14 @@ export default function Home() {
                     className="w-full h-48 sm:h-64 lg:h-80 xl:h-96 object-cover object-top rounded-2xl shadow-lg"
                   />
                 </div>
-                <div className="relative">
+                <div className="relative lg:w-1/3">
                   <div className="absolute top-2 sm:top-4 left-2 sm:left-4 bg-teal-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-sm sm:text-lg font-semibold z-10 shadow-lg">
                     AFTER
                   </div>
                   <img
                     src={selectedProject.after}
                     alt="After renovation"
-                    className="w-full h-48 sm:h-64 lg:h-80 xl:h-96 object-cover object-top rounded-2xl shadow-lg"
+                    className="w-full h-48 sm:h-64 lg:h-60 xl:h-72 object-cover object-top rounded-2xl shadow-lg"
                   />
                 </div>
               </div>

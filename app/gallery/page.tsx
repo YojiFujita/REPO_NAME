@@ -450,8 +450,8 @@ export default function Gallery() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <div className="relative">
+              <div className="flex flex-col lg:flex-row gap-8 mb-8">
+                <div className="relative flex-1">
                   <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full text-lg font-semibold z-10 shadow-lg">
                     BEFORE
                   </div>
@@ -461,14 +461,14 @@ export default function Gallery() {
                     className="w-full h-64 lg:h-80 xl:h-96 object-cover object-top rounded-2xl shadow-lg"
                   />
                 </div>
-                <div className="relative">
+                <div className="relative lg:w-1/3">
                   <div className="absolute top-4 left-4 bg-teal-600 text-white px-4 py-2 rounded-full text-lg font-semibold z-10 shadow-lg">
                     AFTER
                   </div>
                   <img
                     src={selectedProject.after}
                     alt="After renovation"
-                    className="w-full h-64 lg:h-80 xl:h-96 object-cover object-top rounded-2xl shadow-lg"
+                    className="w-full h-64 lg:h-60 xl:h-72 object-cover object-top rounded-2xl shadow-lg"
                   />
                 </div>
               </div>
