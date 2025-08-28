@@ -270,8 +270,8 @@ export default function Home() {
                     onClick={() => openModal(project)}
                     className={`flex-shrink-0 transition-all duration-300 cursor-pointer group bg-gray-50 rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 ${isMobile ? 'w-72 p-4' : isCenter ? 'w-[700px] lg:w-[800px] opacity-100 scale-100 p-6 lg:p-8 z-10 relative' : isSide ? 'w-[280px] lg:w-[320px] opacity-40 scale-85 hover:opacity-60 p-4 lg:p-5' : 'w-[200px] lg:w-[250px] opacity-20 scale-75 p-3 lg:p-4'} ${!isMobile && !isVisible ? 'hidden' : ''}`}
                   >
-                    <div className="grid grid-cols-2 gap-2 lg:gap-4 mb-3 lg:mb-6">
-                      <div className="relative">
+                    <div className="flex justify-center items-start gap-2 lg:gap-4 mb-3 lg:mb-6">
+                      <div className="relative flex-1 max-w-[60%]">
                         <div
                           className={`absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full font-semibold z-10 shadow-md ${isMobile || isCenter ? 'text-xs' : isSide ? 'text-xs scale-90' : 'text-xs scale-75'}`}
                         >
@@ -296,7 +296,7 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      <div className="relative">
+                      <div className="relative flex-1 max-w-[40%]">
                         <div
                           className={`absolute top-2 left-2 bg-teal-600 text-white px-2 py-1 rounded-full font-semibold z-10 shadow-md ${isMobile || isCenter ? 'text-xs' : isSide ? 'text-xs scale-90' : 'text-xs scale-75'}`}
                         >
