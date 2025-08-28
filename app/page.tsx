@@ -207,7 +207,7 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
               写真を選び、広さを入力。
               <br />
-              <span className="text-teal-600">あとはプロに任せるだけ。</span>
+              <span className="text-teal-600">あとはプロに任せるだけ。【テスト変更】</span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 leading-relaxed px-4">
               品番いらず・5秒で見積
